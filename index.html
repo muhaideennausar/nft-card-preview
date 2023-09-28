@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>NFT preview card component</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+    body{
+      width: 100%;
+      min-height: 100vh;
+      background-color: #0d192b;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .card{
+      width: 350px;
+      background-color: #14253d;
+      box-shadow: 0 10px 20px #04080e4b;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 0 25px;
+    }
+    .image-area{
+      width: 100%;
+      aspect-ratio: 1;
+      margin: 25px 0;
+      border-radius: 7px;
+      overflow: hidden;
+      position: relative;
+    }
+    .nft-image{
+      width: 100%;
+    }
+    .view-image{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .view-image:hover{
+      background-color: #00fff875;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 1;
+    }
+    .nft-name{
+      font-size: 1.3rem;
+      letter-spacing: normal;
+      margin-bottom: 20px;
+    }
+    .nft-name:hover{
+      color: #00fff8;
+      cursor: pointer;
+    }
+    .desc{
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #8bacda;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+    .row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .row .left{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .nft-count{
+      color: #00fff8;
+    }
+    .row .right{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .clock-icon{
+      width: 18px;
+      height: 18px;
+    }
+    .days-left{
+      color: #8bacda;
+      font-weight: 300;
+    }
+    footer{
+      width: 100%;
+      height: auto;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 300;
+      color: white;
+      padding: 5px 0;
+      background-color: black;
+      position: absolute;
+      bottom: 0;
+    }
+    hr{
+      border: 1px solid #2f415b;
+    }
+    .bottom{
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+    .profile-picture{
+      width: 10%;
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+    .profile-name{
+      color: white;
+    }
+    .profile-name span{
+      color: #2f415b;
+    }
+    .profile-name:hover{
+      color: #00fff8;
+      cursor: pointer;
+    }
+    footer a{
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <section class="top">
+      <div class="image-area">
+        <img src="images/image-equilibrium.jpg" class="nft-image">
+        <div class="view-image">
+          <img src="images/icon-view.svg" class="eye-icon">
+        </div>
+      </div>
+      <div class="details">
+        <h3 class="nft-name">Equilibrium &#35;3429</h3>
+        <p class="desc">Our Equilibrium collection promotes balance and calm.</p>
+        <div class="row">
+          <div class="left">
+            <img src="images/icon-ethereum.svg" class="nft-icon">
+            <p class="nft-count">0.041 ETH</p>
+          </div>
+          <div class="right">
+            <img src="images/icon-clock.svg" class="clock-icon">
+            <p class="days-left">3 days left</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section class="bottom">
+      <img src="images/image-avatar.png" class="profile-picture">
+      <p class="profile-name"><span>Creation of</span> Jules Wyvern</p>
+    </section>
+  </main>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Muhaideen Nausar</a>.
+  </footer>
+</body>
+</html>
